@@ -1,0 +1,63 @@
+{
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "import"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "extends": "plugin:jest/recommended",
+      "files": ["**/__tests__/**/*", "**/*.{spec,test}.*"],
+      "plugins": ["jest"],
+      "rules": {
+        "jest/no-export": 1,
+        "jest/valid-expect": 1,
+        "jest/no-disabled-tests": 1,
+        "jest/no-focused-tests": 1,
+        "jest/no-identical-title": 1,
+        "jest/prefer-to-have-length": 1
+      }
+    }
+  ],
+  "rules": {
+    "no-empty": 1,
+    "no-unused-vars": 1,
+    "no-async-promise-executor": 1,
+    "no-extra-boolean-cast": 1,
+    "no-useless-catch": 1,
+    "react/jsx-key": 2,
+    "react-hooks/exhaustive-deps": 0,
+    "react/no-unescaped-entities": 1,
+    "react/jsx-no-duplicate-props": 1,
+    "react/prop-types": 0,
+    "react/display-name": 0,
+    "react/react-in-jsx-scope": 0,
+    "react-hooks/rules-of-hooks": 0
+  }
+}

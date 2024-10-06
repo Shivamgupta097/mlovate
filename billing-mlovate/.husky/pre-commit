@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# in case husky not init
+if [ ! -f './.husky/_/husky.sh' ]; then
+  npx husky install
+fi
+
+. "$(dirname "$0")/_/husky.sh"
+
+# run hooks when files staged
+if [ "$(git diff --cached --name-only)" ]; then
+    yarn lint-staged
+fi

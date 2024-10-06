@@ -1,0 +1,30 @@
+:root {
+  --drawerWidth: 270px;
+}
+
+// id root main div
+#root {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  -ms-flex-preferred-size: 0;
+  flex: 1 1 auto;
+  flex-basis: 0;
+  position: relative;
+}
+
+html,
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 16px;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif, color-emoji;
+  line-height: 1.5;
+  background-color: #f6f9fc;
+}
